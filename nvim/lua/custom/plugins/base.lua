@@ -48,6 +48,7 @@ return {
       require('nvim-autopairs').setup {}
     end,
   },
+  { 'djoshea/vim-autoread' },
   {
     'alexghergh/nvim-tmux-navigation',
     config = function()

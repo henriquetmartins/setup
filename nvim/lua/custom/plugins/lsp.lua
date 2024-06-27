@@ -121,6 +121,10 @@ return {
         },
       },
       biome = {},
+      elixirls = {
+        cmd = { 'elixir-ls' },
+        capabilities = capabilities,
+      },
       tsserver = {
         settings = {
           implicitProjectConfiguration = {
