@@ -94,50 +94,46 @@ return {
     })
 
     local servers = {
-      bashls = {},
-      cssls = {},
-      dockerls = {},
       gopls = {
-        filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
-        gopls = {
-          gofumpt = true,
-          analyses = {
-            unusedparams = true,
-          },
-          staticcheck = true,
-          completeUnimported = true,
-          usePlaceholders = true,
-        },
-      },
-      templ = {},
-      html = {},
-      lua_ls = {
-        Lua = {
-          runtime = { version = 'LuaJIT' },
-          diagnostics = {
-            enable = true,
-            globals = { 'vim', 'describe', 'it', 'before_each', 'after_each', 'awesome', 'theme', 'client' },
-          },
-        },
-      },
-      biome = {},
-      elixirls = {
-        cmd = { 'elixir-ls' },
-        capabilities = capabilities,
-      },
-      tsserver = {
         settings = {
-          implicitProjectConfiguration = {
-            checkJs = true,
+          gopls = {
+            gofumpt = true,
+            codelenses = {
+              gc_details = false,
+              generate = true,
+              regenerate_cgo = true,
+              run_govulncheck = true,
+              test = true,
+              tidy = true,
+              upgrade_dependency = true,
+              vendor = true,
+            },
+            hints = {
+              assignVariableTypes = false,
+              compositeLiteralFields = false,
+              compositeLiteralTypes = false,
+              constantValues = false,
+              functionTypeParameters = false,
+              parameterNames = false,
+              rangeVariableTypes = false,
+            },
+            analyses = {
+              fieldalignment = true,
+              nilness = true,
+              unusedparams = true,
+              unusedwrite = true,
+              useany = true,
+            },
+            usePlaceholders = false,
+            completeUnimported = true,
+            staticcheck = true,
+            directoryFilters = { '-.git', '-.vscode', '-.idea', '-.vscode-test', '-node_modules' },
+            semanticTokens = true,
           },
         },
       },
-      jsonls = {},
-      yamlls = {},
       typos_lsp = {},
       vtsls = {},
-      angularls = {},
-      emmet_language_server = {},
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})
