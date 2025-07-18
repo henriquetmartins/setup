@@ -7,6 +7,8 @@
 * paste .oh-my-zsh in ~ (change paths, envs and etc for correctly..)
 * paste .tmux.conf in ~
 * paste nvim folder in ~/.config/nvim 
+* paste k9s/skins folder in ~/.config/k9s
+* set k9s/config.yaml value ui.skin: kanagawa
 
 
 ## colorschemes
